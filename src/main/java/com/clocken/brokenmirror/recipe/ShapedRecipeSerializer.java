@@ -14,8 +14,11 @@ import net.neoforged.fml.util.ObfuscationReflectionHelper;
 
 import java.lang.reflect.Field;
 
+/// Base class for [ShapedRecipe] serializers.
+///
 /// Adapted from Choonster:
 /// [Source code](https://github.com/Choonster-Minecraft-Mods/TestMod3/blob/1.21.x/src/main/java/choonster/testmod3/world/item/crafting/recipe/ShapedRecipeSerializer.java)
+
 public class ShapedRecipeSerializer<T extends ShapedRecipe> implements RecipeSerializer<T> {
     private static final Field PATTERN = ObfuscationReflectionHelper.findField(ShapedRecipe.class, "pattern");
     private static final Field RESULT = ObfuscationReflectionHelper.findField(ShapedRecipe.class, "result");
