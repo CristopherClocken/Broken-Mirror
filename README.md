@@ -1,25 +1,65 @@
 
-Installation information
-=======
+## What this mod does?
+Broken Mirror allows you to make fixed (non-mirrored) shaped recipes by simply setting recipe type as _"brokenmirror:shaped_fixed"_. This means that your shaped recipe won't match the mirrored pattern like vanilla "minecraft:crafting_shaped" does.
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+---
+For example, you can have two different symmetrical shaped recipes that won't overlap each other:
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+**_data/[your_namespace]/recipe/example1.json_**
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+```
+{
+  "type": "brokenmirror:shaped_fixed",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "tag": "c:rods/wooden"
+    },
+    "X": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "XX",
+    "X#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:wooden_axe"
+  }
+}
+```
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+**_data/[your_namespace]/recipe/example2.json_**
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+```
+{
+  "type": "brokenmirror:shaped_fixed",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "tag": "c:rods/wooden"
+    },
+    "X": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "XX",
+    "#X"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:wooden_pickaxe"
+  }
+}
+```
+![example1.json](https://cdn.modrinth.com/data/cached_images/fade17bb085197a4d0f9a772f51d49a162d3b9e1.png)
+![example2.json](https://cdn.modrinth.com/data/cached_images/43d3d8112a7fed5ddb9ff0c1dff26ea69055717e.png)
+
+<details>
+<summary>CREDITS</summary>
+
+Some of the code whas taken and adapted from [Choonster's repository](https://github.com/Choonster-Minecraft-Mods/TestMod3/tree/1.21.x/src/main/java/choonster/testmod3/world/item/crafting/recipe).
+
+</details>
