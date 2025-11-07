@@ -7,7 +7,7 @@ For example, you can have two different symmetrical shaped recipes that won't ov
 
 **_data/[your_namespace]/recipe/example1.json_**
 
-```
+```json
 {
   "type": "brokenmirror:shaped_fixed",
   "category": "equipment",
@@ -32,7 +32,7 @@ For example, you can have two different symmetrical shaped recipes that won't ov
 
 **_data/[your_namespace]/recipe/example2.json_**
 
-```
+```json
 {
   "type": "brokenmirror:shaped_fixed",
   "category": "equipment",
