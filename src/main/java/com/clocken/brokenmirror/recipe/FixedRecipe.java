@@ -4,6 +4,11 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 
+/// A shaped recipe class that matches only the exact recipe pattern instead of symmetrical.
+///
+/// Adapted from Choonster:
+/// [Source code](https://github.com/Choonster-Minecraft-Mods/TestMod3/blob/1.21.x/src/main/java/choonster/testmod3/world/item/crafting/recipe/ShapedArmourUpgradeRecipe.java)
+
 public class FixedRecipe extends ShapedRecipe {
 
     private FixedRecipe(
